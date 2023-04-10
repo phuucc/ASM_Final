@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ASM-Final</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+  
+   .cart-item {
+        border: 1px solid #eee;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+
+      .cart-item img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      .cart-item-product-name {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .cart-item-qty-input {
+        width: 50px;
+        padding: 5px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+
+      .cart-item-price {
+        margin-bottom: 10px;
+      }
+
+      .cart-item-total {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      .cart-subtotal,
+      .cart-total {
+        font-weight: bold;
+      }
+
+      .cart-action {
+        margin-top: 20px;
+      }
+</style>
+<body>
+  <div class="p-5 bg-warning">  
+    <h1>Hoàng Phúc Fashion</h1>
+    </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+    <a href="#" class="navbar-brand">Trang chủ</a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+    data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav">
+    <a href="#" class="nav-item nav-link active">Giới Thiệu</a>
+    <a href="#" class="nav-item nav-link">Về Chúng Tôi</a>
+    <a href="#" class="nav-item nav-link">Tin Nhắn</a>
+    <a href="#" class="nav-item nav-link disabled" tabindex="-
+    1">Báo cáo</a>
+    </div>
+    <div class="navbar-nav  float-end">
+    <a href="#" class="nav-item nav-link float-end">Đăng Nhập / Đăng Kí</a>
+    </div>
+    </div>
+    </div>
+    </nav>
+    <div class="container">
+      <h2 class="text-center">Giỏ hàng</h2>
+
+      <div class="cart-item">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="/anh/aonamvag.webp" alt="Áo thun nam">
+          </div>
+          <div class="col-md-8">
+            <div class="cart-item-product-name">Áo phông nam active in nhỏ</div>    
+            <div class="cart-item-qty">
+              <label for="cart-item-qty1">Số lượng:</label>
+              <input id="cart-item-qty1" type="number" min="1" value="1" class="cart-item-qty-input">
+            </div>
+            <div class="cart-item-price">150.000 đ</div>
+            <div class="cart-item-total">150.000 đ</div>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-danger btn-block">Xóa</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="/anh/aonu.webp" alt="Áo phông nữ in chữ">
+          </div>
+          <div class="col-md-8">
+            <div class="cart-item-product-name">Áo phông nữ in chữ</div>
+            <div class="cart-item-qty">
+              <label for="cart-item-qty2">Số lượng:</label>
+              <input id="cart-item-qty2" type="number" min="1" value="2" class="cart-item-qty-input">
+            </div>
+            <div class="cart-item-price">300.000 đ</div>
+            <div class="cart-item-total">600.000 đ</div>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-danger btn-block">Xóa</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row border">
+        <div class="col-md-8">
+          <div class="cart-subtotal">Tổng số tiền (2 sản phẩm):</div>
+        </div>
+        <div class="col-md-4 text-right">
+          <div class="cart-subtotal">750.000 đ</div>
+        </div>
+      </div>
+
+      <div class="cart-action">
+        <button class="btn btn-primary">Tiếp tục mua hàng</button>
+        <button class="btn btn-success">Thanh toán</button>
+      </div>
+
+    </div>  
+<br>
+
+<footer class="container bg-dark text-light">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Giới Thiệu</h3>
+      <p><a href="">Số ĐKKD: 0107574310, ngày cấp: 23/09/2016, nơi cấp: Sở Kế hoạch và đầu tư Hà Nội</a></p>
+      <p><a href="">Trụ sở chính: Số 688, Đường Quang Trung, Phường La Khê, Quận Hà Đông, Hà Nội, Việt Nam</a></p>
+      <p><a href="">Địa chỉ liên hệ: Phòng 301 Tòa nhà GP Invest, 170 La Thành, P. Ô Chợ Dừa, Q. Đống Đa, Hà Nội</a></p>
+    </div>
+    <div class="col-md-4">
+      <h3>Thương Hiệu</h3>
+      <p><a href="">Giới Thiệu</a></p>
+      <p><a href="">Tin Tức</a></p>
+      <p><a href="">Tuyển Dụng</a></p>
+      <p><a href="">Hệ Thống Cửa Hàng</a></p>
+      <p><a href="">Liên Hệ</a></p>
+
+    </div>
+    <div class="col-md-4">
+      <h3>Hỗ Trợ </h3>
+      <p><a href="">Hỏi Đáp</a></p>
+      <p><a href="">Tra cứu điểm thẻ</a></p>
+      <p><a href="">Hướng Dẫn chọn size</a></p>
+      <p><a href="">Kiểm Tra Đơn hàng</a></p>
+
+    </div>
+  </div>
+  <hr>
+  <div class="float-end">
+    <h6>
+      Visit Us
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </h6>
+  </div>
+  <h6>&copy;Copyright by Phuc</h6>
+ 
+</footer>
+
+  
+</body>
+</html>
